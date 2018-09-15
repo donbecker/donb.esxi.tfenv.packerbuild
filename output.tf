@@ -29,3 +29,23 @@ output "esxi1 disks avail" {
 output "esxi2 disks avail" {
     value = ["${data.vsphere_vmfs_disks.vds_avail_h_esxi2.disks}"]
 }
+
+### Datastores #################################################################
+
+### Networking #################################################################
+
+output "dswitch1 distributed virtual switch ID" {
+    value = "${data.vsphere_distributed_virtual_switch.dvs_dswitch1.id}"
+}
+output "dswitch1 distributed virtual switch Uplinks" {
+    value = "${data.vsphere_distributed_virtual_switch.dvs_dswitch1.uplinks}"
+}
+output "network dportgroup1 ID" {
+    value = "${data.vsphere_network.net_dpg1.id}"
+}
+
+output "network dportgroup1 Type" {
+    value = "${data.vsphere_network.net_dpg1.type}"
+}
+
+### Networking #################################################################
